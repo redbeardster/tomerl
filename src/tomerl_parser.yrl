@@ -162,7 +162,7 @@ to_map({key_value, [H|T], Value}, Map) ->
 
 
 to_binary(Atom) when is_atom(Atom) ->
-  atom_to_binary(Atom);
+  list_to_binary(atom_to_list(Atom));
 
 to_binary(List) ->
   case unicode:characters_to_binary(List) of
